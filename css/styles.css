@@ -707,9 +707,9 @@ label {
     flex: 50% 0 0;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .portfolio__grid > div {
-    flex: 33.333% 0 0;
+    flex: 25% 0 0;
   }
 }
 .portfolio__grid > div > div {
