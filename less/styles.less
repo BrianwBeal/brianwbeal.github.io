@@ -198,14 +198,12 @@
     &__portrait {   
         background-image: url('../portrait.jpg');
         background-size: cover;
-        width: 100%;
+        width: 300px;
+        max-width: 100%;
         height: 300px;
+        margin: 0 auto;
         border: @border;
         border-radius: @border-radius;
-        @media (min-width: @screen-sm-min) {
-            height: 400px;
-            max-width: 600px;
-        }
     }
 }
 
@@ -286,50 +284,54 @@
 
     &__container {
         padding: 16px 8px;
-
     }
 
     &__grid {
+        @media (max-width: @screen-xs-max) {
+            max-width: 400px;
+            margin: 0 auto;
+        }
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        @media (min-width: @screen-sm-min) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
 
-        &--item {
-            padding: 16px 8px;
-            display: inline-block;
-            flex: 50% 0 0;
-            height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        >div {
+            padding: 8px;
+            min-height: 250px;
             @media (min-width: @screen-sm-min) {
-                height: 240px;
-                flex: 25% 0 0;
+                padding: 16px;
+                flex: 50% 0 0;
             }
             @media (min-width: @screen-md-min) {
-                height: 300px;
+                flex: 33.333% 0 0;
             }
-            @media (min-width: @screen-lg-min) {
-                height: 360px;
-            }
-            
-            >a {
-                box-shadow: 8px 8px 0 0 @dark-grey;
-                .center;
-                width: 100%;
-                height: 100%;
-                border: @border;
-                border-radius: @border-radius;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                top: -4px;
-                left: -4px;
 
-                &:active, &:focus, &:hover {
-                    .blue;
-                }
+            >div {
+                height: 100%;
             }
+        }
+    }
+}
+
+.card__title {
+    .left;
+}
+
+.card__text {
+    .left;
+}
+
+.card__button--wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    >a {
+        &:first-child {
+            margin-right: 16px;
         }
     }
 }
