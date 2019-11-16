@@ -16,4 +16,4 @@
 
 ## Notes
 
-[live site](Brianwbeal.github.io)
+[live site](https://brianwbeal.github.io/)
