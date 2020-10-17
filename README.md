@@ -1,6 +1,6 @@
 # Brian Beal
 
-> Portland, Oregon-based Front End Web Developer
+> Portland, Oregon-based Web Developer
 
 ## Info
 
